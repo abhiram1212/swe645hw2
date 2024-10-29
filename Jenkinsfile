@@ -9,7 +9,7 @@ def generateTag() {
 // Pipeline Stages
 pipeline {
     environment {
-        registry = 'abhiram1212/survey642'
+        registry = 'abhiram1212/survey645'
         registryCredential = 'wocdot-vIgbox-niwti4'
     }
     agent any
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('', registryCredential) {
-                        def customImage = docker.build('abhiram1212/survey642:' + tag)
+                        def customImage = docker.build('abhiram1212/survey645:' + tag)
                     }
                 }
             }
@@ -43,7 +43,7 @@ pipeline {
                 script {
                     // sh 'echo ${BUILD_TIMESTAMP}'
                     docker.withRegistry('', registryCredential) {
-                        def image = docker.build('abhiram1212/survey642:' + tag, '.')
+                        def image = docker.build('abhiram1212/survey645:' + tag, '.')
                         docker.withRegistry('', registryCredential) {
                             image.push()
                         }
