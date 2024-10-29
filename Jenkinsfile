@@ -62,7 +62,7 @@ pipeline {
         stage('Deploying Rancher to single node') {
             steps {
                 script {
-                	//sh 'kubectl apply -f deployment.yaml'
+                	sh 'kubectl apply -f deployment.yaml'
                     sh 'kubectl set image deployment/swe645-deployment -n swe645-namespace container-0=abhiram1212/survey642:' + tag
                 }
             }
