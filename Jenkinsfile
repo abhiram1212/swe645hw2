@@ -63,8 +63,7 @@ pipeline {
             steps {
                 script {
                 	//sh 'kubectl apply -f deployment.yaml'
-                    sh 'kubectl set image deployment/swe645-deployment -n swe645-namespace container-0=abhiram1212/survey645:latest -n default'
-                    sh 'kubectl rollout restart deployment/swe645-deployment -n default'
+                    sh 'kubectl set image deployment/swe645-deployment -n swe645-namespace container-0=abhiram1212/survey642:' + tag
                 }
             }
         }
