@@ -10,7 +10,7 @@ def generateTag() {
 pipeline {
     environment {
         registry = 'abhiram1212/survey645'
-        registryCredential = 'wocdot-vIgbox-niwti4'
+        registryCredential = 'docker-cred'
     }
     agent any
 
