@@ -9,6 +9,7 @@ pipeline {
     environment {
         registry = 'abhiram1212'
         registryCredential = 'docker-cred'
+        KUBECONFIG = '/home/Jenkins/.kube/config'
     }
     agent any
 
