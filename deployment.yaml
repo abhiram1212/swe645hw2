@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: swe645-deployment
-  namespace: swe645-namespace  # Specify the namespace here
+  namespace: swe645-namespace  
 spec:
   replicas: 3  # Number of pod replicas
   selector:
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: container-0
-        image: abhiram1212/survey645:latest  # Use the latest tag or a specific tag
+        image: abhiram1212/survey645:latest  
         ports:
-        - containerPort: 8080  # Adjust to match the exposed port of your app
+        - containerPort: 8080  
